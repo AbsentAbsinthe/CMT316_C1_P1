@@ -22,7 +22,7 @@ for home in dataset_file[1:]:
         Y_train.append(1)
 
 X_train_expensive=np.asarray(X_train)
-Y_train_expensive=np.asarray(Y_train) # This step is really not necessary, but it is recommended to work with numpy arrays instead of Python lists.
+Y_train_expensive=np.asarray(Y_train)
 
 svm_clf_expensive=sklearn.svm.SVC(kernel="linear",gamma='auto') # Initialize the SVM model
 svm_clf_expensive.fit(X_train_expensive,Y_train_expensive) # Train the SVM model
