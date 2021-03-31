@@ -17,12 +17,12 @@ for home in dataset_file[1:]:
     for i in range(1, len(home_linesplit)-1):
         vector_home_features[i - 1]=float(home_linesplit[i])
     X_train.append(vector_home_features)
-    Y_train.append(home_linesplit[-1])
+    Y_train.append(float(home_linesplit[-1]))
 
 X_train_expensive=np.asarray(X_train)
 Y_train_expensive=np.asarray(Y_train)
 
-svm_clf_expensive=sklearn.svm.SVR(kernel="linear",gamma='auto')
+svm_clf_expensive=sklearn.svm.SVR(kernel="poly",degree=3,cache_size=2000)
 svm_clf_expensive.fit(X_train_expensive,Y_train_expensive) 
 
 test_path='D:/UNI/CMT316 - Applications of Machine Learning; Natural Language Processing and Computer Vision/Coursework 1/datasets_coursework1/real-state/test_full_Real-estate.csv'
@@ -39,11 +39,11 @@ for home in test_dataset_file[1:]:
         vector_test_home_features[i-1]=float(test_home_linesplit[i])
     prediction = svm_clf_expensive.predict([vector_test_home_features])
     predictions.append(prediction)
-    actual.append(test_home_linesplit[-1])
+    actual.append(float(test_home_linesplit[-1]))
 
 predictions_array=np.asarray(predictions)
 actual_array=np.asarray(actual)
 
 mserror = mse(actual_array, predictions_array)
 
-print(mserror)
+print("Mean squared error: " + str(mserror))
