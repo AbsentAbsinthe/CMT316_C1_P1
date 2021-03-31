@@ -54,3 +54,5 @@ for home in test_dataset_file[1:]:
 test_outcome=[true_expensive, false_expensive, true_cheap, false_cheap]
 
 print('True Positive (True Expensive): ' + str(test_outcome[0]) + '\nFalse Positive (False Expensive): ' + str(test_outcome[1]) + '\nTrue Negative (True Cheap): ' + str(test_outcome[2]) + '\nFalse Negative (False Cheap): ' + str(test_outcome[3]))
+
+print('\n Accuracy: ' + str(((true_cheap + true_expensive)/(true_cheap + true_expensive + false_cheap + false_expensive))))
