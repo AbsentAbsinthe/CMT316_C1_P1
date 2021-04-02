@@ -3,17 +3,18 @@ import nltk
 import sklearn
 from sklearn.pipeline import make_pipeline
 from sklearn.preprocessing import StandardScaler
+from sklearn.metrics import classification_report
 import operator
 import os
 import random
 from random import shuffle
 import requests
 
-nltk.download('punkt')
+nltk.download('punkt') #Used to download necessary libraries
 nltk.download('wordnet')
 nltk.download('stopwords')
 
-classifications = ['business', 'entertainment', 'politics', 'sport', 'tech']
+classifications = ['business', 'entertainment', 'politics', 'sport', 'tech'] 
 data = []
 test_data = []
 
@@ -105,14 +106,18 @@ clf.fit(X_train_np, Y_train_np)
 true_classification = 0
 false_classification = 0
 
+Y_true = []
+Y_predict = []
+
 for article in test_data:
     article_vector=get_vector_text(frequent_words,article[0])
     prediction = clf.predict([article_vector])
+    Y_true.append(classifications.index(article[1]))
+    Y_predict.append(prediction[0])
     if classifications[prediction[0]] == article[1]:
         true_classification += 1
     else:
         false_classification += 1
-
-print('True results : ' + str(true_classification) + '\nFalse results: ' + str(false_classification))
-
-
+print('\n')
+print(classification_report(Y_true, Y_predict))
+print('\n  True results:    ' + str(true_classification) + '\n False results:    ' + str(false_classification))
