@@ -83,8 +83,36 @@ X_train = []
 Y_train = []
 
 for article in data:
-    vector_pos_review=get_vector_text(frequent_words,article[0])
-    X_train.append(vector_pos_review)
-    Y_train.append(article[1])
+    article_vector=get_vector_text(frequent_words,article[0])
+    X_train.append(article_vector)
+    if article[1] == 'business':
+        Y_train.append(0)
+    elif article[1] == 'entertainment':
+        Y_train.append(1)
+    elif article[1] == 'politics':
+        Y_train.append(2)
+    elif article[1] == 'sport':
+        Y_train.append(3)
+    else:
+        Y_train.append(4)
+
+X_train_np=np.asarray(X_train)
+Y_train_np=np.asarray(Y_train)
+
+clf = sklearn.svm.SVC(decision_function_shape='ovo')
+clf.fit(X_train_np, Y_train_np)
+
+true_classification = 0
+false_classification = 0
+
+for article in test_data:
+    article_vector=get_vector_text(frequent_words,article[0])
+    prediction = clf.predict([article_vector])
+    if classifications[prediction[0]] == article[1]:
+        true_classification += 1
+    else:
+        false_classification += 1
+
+print('True results : ' + str(true_classification) + '\nFalse results: ' + str(false_classification))
 
 
