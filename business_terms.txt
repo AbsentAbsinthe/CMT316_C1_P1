@@ -1,0 +1,807 @@
+1%/10 Net 30
+10-K
+10-Q SEC Form
+10-Year Treasury Note
+1040 IRS Form
+1040A Form
+1040EZ Form
+IA-1092 SEC Release
+COFI
+11th District Cost of Funds Index
+12B-1 Fee
+183-Day Rule
+30-Year Treasury
+51% Attack
+401(a) Plan
+401(k) Plan
+403(b) Plan
+457 Plan
+5/1 Hybrid ARM
+5/1 Hybrid Adjustable-Rate Mortgage
+501(c)(3) Organizations
+52-Week High/Low
+529 Plan
+Form 8K
+8-K
+80-20 Rule
+83(b) Election
+Absolute Advantage
+Accounting Equation
+ARR
+Accounting Rate of Return
+Acid-Test Ratio
+Acquisition
+Adverse Selection
+After-Hours Trading
+Alpha
+Amalgamation
+ADR
+American Depositary Receipt
+American Dream
+ANOVA
+Analysis of Variance
+Angel Investor
+APR
+Annual Percentage Rate
+Annuity
+AFR
+Applicable Federal Rate
+Asset
+Asset Management
+Asset Turnover Ratio
+AUM
+Assets Under Management
+ACH
+Automated Clearing House
+ATM
+Automated Teller Machine
+ATR
+Average True Range
+Balanced Scorecard
+Balance Sheet
+Bank Identification Numbers
+Bankruptcy
+Baye's Theorem
+Bear Market
+Berkshire Hathaway
+Bernie Madoff
+Beta
+Bill of Lading
+Bitcoin Mining
+Blockchain
+Bollinger Band
+Bond
+Break-Even Analysis
+Brexit
+Budget
+Budget Deficit
+Bull Market
+Business Cycle
+Business Ethics
+Business Model
+Business-to-Consumer
+Business Valuation
+Capital
+CAPM
+Capital Asset Pricing Model
+Capital Expenditure
+Capitalism
+CLT
+Central Limit Theorem
+CFA
+Chartered Financial Analyst
+CEO
+Chief Executive Officer
+Code of Ethics
+CV
+Coefficient of Variation
+Collateral
+Command Economy
+Comparative Advantage
+CAGR
+Compound Annual Growth Rate
+Compound Interest
+Conflict Theory
+CPI
+Consumer Price Index
+Contribution Margin
+Correlation
+Correlation Coefficient
+COGS
+Cost of Goods Sold
+Creative Destruction
+CDS
+Credit Default Swap
+Current Ratio
+Customer Service
+DPO
+Days Payable Outstanding
+DSO
+Days Sales Outstanding
+Debenture
+Debt Ratio
+DSCR
+Debt-Service Coverage Ratio
+D/E
+Debt-to-Equity Ratio
+Deferred Compensation
+DAP
+Delivered-at-Place
+DDP
+Delivered Duty Paid
+DDU
+Delivered Duty Unpaid
+Demand
+Demand Elasticity
+Demonetization
+Derivative
+Dilution
+Disbursement
+Discount Rate
+Diversification
+Dividend
+Dividend Payout Ratio
+Dividend Yield
+DJIA
+Dow Jones Industrial Average
+Due Diligence
+DuPont Analysis
+Earnest Money
+EBIT
+Earnings Before Interest and Taxes
+EBITDA
+Earnings Before Interest, Taxes, Depreciation and Amortization
+EPS
+Earnings Per Share
+EBITA
+Economic Growth
+Economic Moat
+Economics
+Economies of Scale
+ESOP
+Employee Stock Ownership Plan
+Endowment Fund
+ERP
+Enterprise Resource Planning
+EV
+Enterprise Value
+Entrepreneur
+EPA
+Environmental Protection Agency
+Environmental, Social, and Governance (ESG) Criteria
+Equity
+EAC
+Equivalent Annual Cost
+Escrow
+EU
+European Union
+Ex-Dividend
+Exchange Rate
+ETF
+Exchange-Traded Fund
+Externality
+FAANG Stocks
+Factors of Production
+FANG Stocks
+Feasibility Study
+FDIC
+Federal Deposit Insurance Corporation
+Federal Funds Rate
+FHA
+Federal Housing Administration Loan
+FICA
+Federal Insurance Contributions Act
+Fiat Money
+Fiduciary
+Finance
+FI
+Financial Institution
+Financial Statements
+Fintech
+Financial Technology
+Fiscal Policy
+Fixed Income
+Fixed-Income Security
+Four Ps
+FCA
+Free Carrier
+Free Market
+FOB
+Free on Board
+Free Trade
+Fringe Benefits
+Futures
+Game Theory
+Gamma
+GATT
+General Agreement on Tariffs and Trade
+GDPR
+General Data Protection Regulation
+General Ledger
+GAAP
+Generally Accepted Accounting Principles
+Gen X
+Generation X
+Geometric Mean
+Giffen Good
+Gini Index
+Globalization
+GST
+Goods and Services Tax
+Goodwill
+Gordon Growth Model
+Government Bond
+Government Shutdown
+Great Depression
+GDP
+Gross Domestic Product
+Gross Income
+Gross Margin
+GNP
+Gross National Product
+Gross Profit
+Gross Profit Margin
+Guarantor
+Hard Skills
+Harmonic Mean
+Head And Shoulders Pattern
+HMOs
+Health Maintenance Organizations
+HSA
+Health Savings Account
+Hedge
+Hedge Fund
+HHI
+Herfindahl-Hirschman Index
+Heteroskedasticity
+High-Low Method
+HNWI
+High-Net-Worth Individual
+Hold Harmless Clause
+Holding Company
+Home Equity Loan
+HOA
+Homeowners Association
+HOA Fee
+Homeowners Association Fee
+Homestead Exemption
+Horizontal Integration
+Hostile Takeover Definition
+Housing Bubble
+Human Capital
+Hurdle Rate
+Hyperinflation
+Hypothesis Testing
+Income
+Income Statement
+Indemnity
+Indemnity Insurance
+Index Fund
+IRA
+Individual Retirement Account
+Industrial Revolution
+Inferior Good
+Inflation
+IPOs
+Initial Public Offerings
+Insider Trading
+Insurance
+Insurance Premium
+Interest Coverage Ratio
+Interest Rate
+IRR
+Internal Rate of Return
+IRS
+Internal Revenue Service
+IFRS
+International Financial Reporting Standards
+IMF
+International Monetary Fund
+Interpersonal Skills
+Inventory Turnover
+Inverted Yield Curve
+Invisible Hand
+Irrevocable Trust
+J-Curve
+January Effect
+JGB
+Japanese Government Bond
+Jay-Z
+Jensen's Measure
+Job Market
+John Maynard Keynes
+Joint and Several Liability
+Joint Probability
+Joint-Stock Company
+Joint Tenancy
+JV
+Joint Venture
+Jones Act
+Joseph Schumpeter
+Journal
+JTWROS
+Joint Tenants With Right of Survivorship
+Japanese Yen
+JPY
+Jumbo CD
+Jumbo Loan
+Junk Bond
+JD
+Juris Doctor
+Jurisdiction Risk
+JIC
+Just In Case
+JIT
+Just In Time
+Kaizen
+Karl Marx
+Keltner Channel
+Keogh Plan
+KPI
+Key Performance Indicators
+Key Person Insurance
+Key Rate Duration
+Keynesian Economics
+Kickback
+Kiddie Tax
+KIPPERS
+Kids In Parents' Pockets Eroding Retirement Savings
+Kiosk
+Kiting
+Klinger Oscillator
+Knock-In Option
+Knock-Out Option
+KST
+Know Sure Thing
+KYC
+Know Your Client
+Knowledge Economy
+KPO
+Knowledge Process Outsourcing
+KOSPI
+Korean Composite Stock Price Indexes
+Kurtosis
+KWD
+Kuwaiti Dinar
+The Kyoto Protocol
+Laissez-Faire
+Law of Demand
+Law of Supply
+Law of Supply and Demand
+Leadership
+LOI
+Letter of Intent
+Letters of Credit
+Leverage
+Leverage Ratio
+LBO
+Leveraged Buyout
+Liability
+Liability Insurance
+Limit Order
+Limited Government
+LLC
+Limited Liability Company
+LP
+Limited Partnership
+LOC
+Line of Credit
+Liquidation
+Liquidity
+LCR
+Liquidity Coverage Ratio
+Liquidity Ratio
+LTV
+Loan-To-Value Ratio
+LIBOR
+London Inter-Bank Offered Rate
+Limited
+Ltd.
+Macroeconomics
+Magna Cum Laude
+MBO
+Management by Objectives
+Margin
+Margin Call
+Market Share
+Marketing
+Marketing Strategy
+MLP
+Master Limited Partnership
+MOU
+Memorandum of Understanding
+Mercantilism
+M&A
+Mergers and Acquisitions
+Milton Friedman
+Mixed Economic System
+Monetary Policy
+Money Laundering
+Money Market Account
+Monopolistic Competition
+Monte Carlo Simulation
+Moore's Law
+MACD
+Moving Average Convergence Divergence
+Multilevel Marketing
+Mutual Fund
+Mutually Exclusive
+Nasdaq
+Nash Equilibrium
+Negative Correlation
+Neoliberalism
+NAV
+Net Asset Value
+NI
+Net Income
+NOI
+Net Operating Income
+NPV
+Net Present Value
+Net Profit Margin
+Net Worth
+Netting
+Network Marketing
+Networking
+NYSE
+New York Stock Exchange
+Next of Kin
+NINJA Loan
+Nominal
+NDA
+Non-Disclosure Agreement
+Normal Distribution
+NAFTA
+North American Free Trade Agreement
+Not for Profit
+Notional Value
+Novation
+Null Hypothesis
+Offset
+OASDI
+Old Age, Survivors, and Disability Insurance
+Oligopoly
+Onerous Contract
+Online Banking
+Open Market Operations
+Operating Income
+Operating Leverage
+Operating Margin
+Operations Management
+Opportunity Cost
+Option
+OPEC
+Organization of the Petroleum Exporting Countries
+OB
+Organizational Behavior
+Organizational Structure
+OEM
+Original Equipment Manufacturer
+OID
+Original Issue Discount
+OTM
+Out Of The Money
+Outsourcing
+OTC
+Over-The-Counter
+Over-The-Counter Market
+Overdraft
+Overhead
+Overnight Index Swap
+P-Value
+Partnership
+Penny Stocks Trade
+Per Capita GDP
+Perfect Competition
+Personal Finance
+Phillips Curve
+Ponzi Scheme
+Porter's 5 Forces
+Positive Correlation
+Pre-Market
+Preference Shares
+Preferred Stock
+Present Value
+P/E Ratio
+Price-to-Earnings Ratio
+Price/Earnings-to-Growth (PEG) Ratio
+Pro Rata
+PPI
+Producer Price Index
+Profit
+P&L
+Profit and Loss Statement
+Promissory Note
+Prospectus
+PLC
+Public Limited Company
+Put Option
+Tobin's Q
+Q Ratio
+Quadruple Witching
+Qualified Dividend
+QIB
+Qualified Institutional Buyer
+QIP
+Qualified Institutional Placement
+QLAC
+Qualified Longevity Annuity Contract
+Qualified Opinion
+Qualified Retirement Plan
+Qualified Terminable Interest Property (QTIP) Trust
+Qualitative Analysis
+Quality Control
+Quality of Earnings
+Quality Management
+QA
+Quantitative Analysis
+Quantitative Easing
+Quantitative Trading
+Quantity Demanded
+Q1, Q2, Q3, Q4
+Quarter
+QOQ
+Quarter on Quarter
+Quasi Contract
+Quick Assets
+Quick Ratio
+Quintiles
+Quota
+R-Squared
+Racketeering
+Rate of Return
+Rational Choice Theory
+Real Estate
+REIT
+Real Estate Investment Trust
+GDP
+Real Gross Domestic Product
+Receivables Turnover Ratio
+RIA
+Registered Investment Advisor
+Regression
+RSI
+Relative Strength Index
+Renewable Resource
+Repo
+Repurchase Agreement
+RFP
+Requests for Proposal
+RMD
+Required Minimum Distribution
+Retained Earnings
+ROA
+Return on Assets
+ROE
+Return on Equity
+ROIC
+Return on Invested Capital
+ROI
+Return on Investment
+k
+Roth 401
+Roth IRA
+Rule of 72
+Russell 2000 Index
+Standard & Poor's 500 Index
+S&P 500 Index
+Sarbanes-Oxley (SOX) Act of 2002
+SEC
+Securities and Exchange Commission
+Security
+Series 63
+Series 7
+Sharpe Ratio
+Short Selling
+Social Media
+Social Responsibility
+Solvency Ratio
+Spread
+Standard Deviation
+Stochastic Oscillator
+Stock
+SKU
+Stock Keeping Unit
+Stock Market
+Stop-Limit Order
+Straddle
+Strength, Weakness, Opportunity, and Threat (SWOT) Analysis
+Subsidiary
+Supply Chain
+Sustainability
+Systematic Sampling
+T-Test
+Tariff
+Technical Analysis
+TIC
+Tenancy in Common
+Term Life Insurance
+TV
+Terminal Value
+Third World
+Total-Debt-to-Total-Assets
+TER
+Total Expense Ratio
+TQM
+Total Quality Management
+TSR
+Total Shareholder Return
+Trade Deficit
+TTM
+Trailing 12 Months
+Tranches
+Transaction
+T-Bills
+Treasury Bills
+TIPS
+Treasury Inflation-Protected Security
+TBL
+Triple Bottom Line
+TARP
+Troubled Asset Relief Program
+Trust
+Trust Fund
+Trustee
+TSA PreCheck
+Turnover
+Underlying Asset
+Underwriter
+Underwriting
+Unearned Income
+Unemployment
+Unemployment Rate
+Unicorn
+UMA
+Unified Managed Account
+Uniform Distribution
+UGMA
+Uniform Gifts to Minors Ac
+UTMA
+Uniform Transfers to Minors Act
+Unilateral Contract
+UIT
+Unit Investment Trust
+UN
+United Nations
+Universal Life Insurance
+Unlevered Beta
+UFCF
+Unlevered Free Cash Flow
+Unlimited Liability
+Unsecured Loan
+Upside
+USDX
+U.S. Dollar Index
+U.S. Savings Bonds
+Utilities Sector
+Utility
+Valuation
+Value Added
+Value Chain
+Value Investing
+Value Proposition
+VaR
+Value at Risk
+VAT
+Value-Added Tax
+Variability
+Variable Annuity
+Variable Cost
+Variance
+Vega
+Velocity of Money
+Venture Capital
+VC
+Venture Capitalist
+Vertical Analysis
+Vertical Integration
+Vesting
+VBA
+Visual Basic for Applications
+CBOE Volatility Index
+VIX
+Volatility
+Volcker Rule
+VWAP
+Volume Weighted Average Price
+VEBA
+Voluntary Employees Beneficiary Association Plan
+W-2 Form
+W-4 Form
+W-8 Form
+Waiver of Subrogation
+Wall Street
+War Bond
+Warrant
+Wash Sale
+Wash-Sale Rule
+Wealth Management
+Wearable Technology
+Weighted Average
+WACC
+Weighted Average Cost of Capital
+White-Collar Crime
+White Paper
+WPI
+Wholesale Price Index
+Wire Fraud
+Wire Transfers
+Withholding Allowance
+Withholding Tax
+NWC
+Working Capital
+WIP
+Works-in-Progress
+WTO
+World Trade Organization
+WorldCom
+X-Efficiency
+X-Mark Signature
+eXtensible Business Reporting Language
+XBRL
+Eastern Caribbean Dollar
+XCD
+XD
+Xenocurrency
+Xetra
+Extensible Markup Language
+XML
+XRT
+Yacht Insurance
+Yale School of Management
+Yankee Bond
+Yankee Market
+Year-End Bonus
+YOY
+Year-Over-Year
+YTD
+Year to Date
+YMPE
+Year's Maximum Pensionable Earnings
+Yearly Rate Of Return Method
+YRT
+Yearly Renewable Term
+Yield
+Yield Basis
+Yield Curve
+Yield Curve Risk
+Yield Maintenance
+YOC
+Yield on Cost
+Yield on Earning Assets
+Yield Spread
+Yield to Call
+YTM
+Yield to Maturity
+YTW
+Yield to Worst
+Yield Variance
+York Antwerp Rules
+Yuppie
+Z-Score
+Z-Test
+Zacks Investment Research
+ZCash
+ZBA
+Zero Balance Account
+ZBB
+Zero-Based Budgeting
+Zero-Beta Portfolio
+Zero-Bound
+Zero Coupon Inflation Swap
+Zero Coupon Swap
+Zero Cost Collar
+Zero-Coupon Bond
+Zero-Lot-Line House
+Zero-One Integer Programming
+Zero-Rated Goods
+Zero-Sum Game
+Z-spread
+Zero-Volatility Spread
+Zeta Model
+Zig Zag Indicator
+zk-SNARK
+Zombies
+Zoning
+Zoning Ordinance
+ZZZZ Best
