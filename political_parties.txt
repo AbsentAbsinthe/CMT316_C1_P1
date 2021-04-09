@@ -1,3 +1,6 @@
+Social Democratic and Labour Party
+Social Democratic Party
+United Kingdom Independence Party
 Islamic Salvation Front
 National Liberation Front
 Popular Movement for the Liberation of Angola
@@ -11,29 +14,25 @@ Liberal Party of Australia
 the Nationals
 United Australia Party
 United Tasmania Group
-Brazilian Democratic Movement, Party of the
+Brazilian Democratic Movement
 Brazilian Social Democratic Party
 Liberal Front Party
 Bulgarian Agrarian National Union
 Khmer Rouge
-Bloc Québécois
 Canadian Alliance
 Clear Grits
 Co-operative Commonwealth Federation
 Conservative Party of Canada
 Liberal Party of Canada
 New Democratic Party
-Parti Québécois
 Parti Rouge
 Reform Party
 Social Credit Party
 Chinese Communist Party
 Nationalist Party
 Croatian Peasant Party
-Ustaša
 Communist Party of Cuba
 Wafd
-Farabundo Martí National Liberation Front
 European Liberal Democrat and Reform Party
 European People’s Party
 Party of European Socialists
@@ -87,19 +86,15 @@ Indonesian Democratic Party of Struggle
 National Awakening Party
 Sarekat Islam
 United Development Party
-Baʿth Party
 Democratic Left
-Fianna Fáil
 Fine Gael
 Green Party
 Progressive Democrats
-Sinn Féin
 Israel Labour Party
 Kadima
 Likud
 Mapai
 Mapam
-Mizraḥi
 Shas
 Yisrael Beiteinu
 Democrats of the Left
@@ -113,11 +108,7 @@ Popolare
 Democratic Party of Japan
 Democratic Socialist Party
 Japanese Communist Party
-Kaishintō
 Liberal-Democratic Party of Japan
-Minseitō
-New Kōmeitō
-Rikken Seiyūkai
 Social Democratic Party of Japan
 Your Party
 Kenya African National Union
@@ -137,7 +128,6 @@ New Zealand Political Reform League
 Young Maori Party
 Young New Zealand Party
 People’s Democratic Party
-Jamaʿat-i Islami
 APRA
 Civilista
 Romanian National Party
@@ -180,7 +170,6 @@ Nationalist Party
 Tunisia
 Democratic Constitutional Rally
 Destour
-Nahḍah Party
 Young Tunisians
 Justice and Development Party
 Welfare Party
@@ -193,7 +182,6 @@ Liberal Democrats
 Liberal Party
 Northern Ireland Women’s Coalition
 Plaid Cymru
-Sinn Féin
 Social Democratic and Labour Party
 Social Democratic Party
 United Kingdom Independence Party

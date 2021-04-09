@@ -1,0 +1,555 @@
+baton
+bell lap
+decathlon
+discus
+false start
+field
+foul
+hammer
+heptathlon
+high jump
+hurdles
+javelin
+lane
+lap
+long jump
+marathon
+middle-distance
+pole-vault
+relay
+record
+shot put
+sprint
+starting blocks
+steeplechase
+track
+track and field
+triple jump
+Cross Country
+Alley
+Back Alley
+Backcourt
+Balk
+Baseline
+Carry
+Center
+Base Position
+Center Line
+Clear
+Court
+Drive
+Drop
+Fault
+Feint
+Flick
+Forecourt
+Hairpin Net Shot
+Halfcourt Shot
+Kill
+Let
+Long Service Line
+Match
+Midcourt
+Net Shot
+Push Shot
+Racquet
+Rally
+Serve
+Service Court
+Short Service Line
+Shuttlecock
+Smash
+Wood Shot
+Pinching
+Home run
+Base runner
+Throw
+Perfect game
+Strike
+Put out
+Cue
+cannon
+baulk
+pot scratch
+long jenny
+short jenny
+frame
+spider
+short and long rest
+in-off
+Accidental Butt
+Bleeder
+Bolo Punch
+Bout
+Brawler
+Break
+Buckle
+Canvas
+Card
+Caught Cold
+Clinch
+Corkscrew Punch
+Cornerman
+Counterpunch
+Cross
+Cutman
+Dive
+Eight Count
+Glass Jaw
+Haymaker
+Kidney Punch Liver Shot
+Low Blow
+Mauler
+Neutral Corner
+Plodder
+Ring G eneralship
+Roughhousing
+Southpaw
+Spar
+Stablemate
+Technical Knockout
+Walkout Bout
+Whiskers
+Contract bridge
+duplicate bridge
+tricks
+suite
+rubber
+trump
+grand slam
+little slam
+Pull
+Cue
+Hit
+Object ball
+Break shot
+Scoring
+Cushion billiards
+Knock out
+Round
+Ring Stoppage
+Punch
+Upper-cut
+Kidney punch
+Timing
+Foot work
+Gambit
+stalemate
+move
+resign
+checkmate
+Hat-trick
+maiden
+follow-on
+declare
+bowled
+caught
+run-out
+leg before wicket
+stumped
+striker
+slips
+gully
+short leg
+silly
+mid-on
+point
+cover
+mid-off
+bouncer
+beamer
+googly
+full toss
+drive
+cut
+pull
+hook
+flick
+Sprint
+Time trial
+Point race
+Trackrace
+Attacker
+Back Heel
+Back Pass
+Ball Carrier
+Bending the Ball
+Bicycle Kick
+Center Spot
+Corner Flag
+Corner Kick
+Cross
+Defender
+Direct Free Kick
+Dribble
+Far Post
+FIFA
+Futsal
+Give and Go
+Goal Line
+Goal Mouth
+Goalkeeper
+Header
+Indirect Free Kick
+Inswinger
+Kickoff
+Man to Man Marking
+Midfielder
+Nearpost
+Obstruction
+Offside Trap
+Offside
+One-Touch Pass
+Penalty Spot
+Red Card
+Striker
+Sweepe
+Tackle
+Volley
+ace
+albatross
+double eagle
+all square
+approach putt
+apron
+ball mark
+ballooning
+beach
+birdie
+blind shot
+bogey
+bunker
+caddy
+chip
+Claw grip
+condor
+dogleg
+dub
+flag
+Four-Ball
+Mulligan
+off the deck
+peg
+sand trap
+tee shot
+Aerial
+Back Handspring
+Back Somersault
+Double Back
+Double Twist
+Flyaway
+Front Hip Pullover
+Front Pike Somersault
+Front Split
+Front Walkover
+Gienger
+Handstand
+Hip Circle
+Miller
+Pike
+Rudi
+Straddle
+Swedish Fall
+Tsukahara
+Tuck
+Whip Back
+Centre
+defender
+forward
+half
+penalty-stroke
+penalty corner
+push-in
+free-hit
+striking circle goal
+goal-line
+touch-line
+goal keeper
+off-side
+foul
+stick
+carry
+dribble
+tiebreaker
+trapping
+Race course
+steeplechase
+bets
+bookies
+jockey
+punter
+Cocoa
+Blue
+white
+Green belt
+Mallet
+bunker
+chukker
+handicap
+goal
+sixty yarder
+Bag
+bull’s eye
+marksmanship
+plug
+skeet
+Add Up
+Anchor
+Approved Meet
+Backstroke
+Banner
+Beep
+Bonus Heat
+Bottom
+Breaststroke
+Bull Pen
+Bulletin
+Cap
+Car pool
+Cards
+Check-In
+Check-Out
+Course
+Dryland
+False Start
+Freestyle
+Gun Lap
+Heats
+Jump
+Lane Lines
+Paddle
+Parka
+Pool
+Pull Buoy
+Relays
+Split
+Stroke
+Yardage
+Backhand
+Backspin
+Block
+Chop
+Closed
+Dead ball
+Doubles
+Drive
+Drop shot
+Expedite rule
+Forehand
+Inverted
+Let
+Lob
+Long pips
+Loop
+Match
+Medium-long
+Open
+Penhold
+Pips-in
+Pips-out
+Push
+Receive
+Seemiller
+Serve
+Set
+Shakehands
+Short
+Sidespin
+Skunk
+Smash
+Topspin
+smash
+cross-court
+passing shot
+backhand
+forehand
+slice
+top-spin
+serve
+dropshot
+lob
+down-the-line
+deuce
+tie-breaker
+set
+game
+grand slam
+ace
+volley
+Assist
+Attack
+Attack line
+Back row attack
+Block
+Block assist
+Campfire defense
+Carry
+Center line violation
+Chester
+Coach kill
+Cover the hitter
+Cut shot
+Deep dish
+Dig
+Facial
+Fish
+Floater
+Friendly fire
+Free ball
+Heat
+Husband-and-wife-play
+Jedi defense
+Joust
+Jump serve
+Kill
+Kong
+Line shot
+Lollipop
+Mintonette
+Monument valley
+Net violation
+Paint brush
+Pancake
+Pepper
+Prince/Princess of whales
+Quick set
+Rainbow
+Red card
+Redwood
+Roof
+Screening
+Service ace
+Set
+Shank
+Side out
+Six-pack
+Sizzle the pits
+Spike
+Strong side
+Stuff
+Tandem
+Tip
+Tool
+Trap set
+Tuna
+Whale
+Yellow card
+Bulking
+bitch tits
+shredded
+Six pack
+Feeling the Burn
+Power Rack
+Smith Machine
+Muscle Memory
+Pump and Toners
+Cardio Bunny
+Plateau
+Vascularity
+Supersets
+Drop Sets/Strip Sets
+Periodization
+Pyramiding
+Standard Plates and Bars
+Free style
+Hal Nelson
+Point
+Heave
+Acrobatics
+Aerobic Gymnastics
+Archery
+Arnis
+Artistic Gymnastics
+Artistic Swimming
+Badminton
+Baseball
+Basketball
+Baton Twirling
+Bicycle Motocross
+BMX
+Billiards
+Pool
+Bobsleigh
+Bodybuilding
+Bowling
+Boxing
+Canoeing
+Car Racing
+Cheerleading
+Chess
+Cricket
+Croquet
+Curling
+Dance Sport
+Darts
+Diving
+Dodgeball
+Fencing
+Figure Skating
+Football
+Soccer
+Frisbee
+Golf
+Handball
+Hang Gliding
+Hockey
+Horseback Riding
+Horse Racing
+Ice Hockey
+Ice Skating
+Jet Ski Racing
+Judo
+Karate
+Kayaking
+Kendo
+Kick Boxing
+Kite Surfing
+Lacrosse
+Luge
+Mixed Martial Arts
+Motocross
+Muay Thai
+Paintball
+Parachuting
+Paragliding
+Parkour
+Polo
+Pool
+Billiards
+Powerlifting
+Rafting
+Rhythmic Gymnastics
+Rock Climbing
+Rowing
+Rugby
+Sailing
+Sandboarding
+Scuba Diving
+Shooting
+Skateboarding
+Skeleton
+Skiing
+Snowboarding
+Softball
+Speed Skating
+Sport Climbing
+Squash
+Sumo Wrestling
+Surfing
+Swimming
+Synchronized Skating
+Synchronized Swimming
+Table Tennis
+Taekwondo
+Tennis
+Track and Field
+Trampolining
+Triathlon
+Tetrathlon
+Tug of War
+Volleyball
+Water Polo
+Weightlifting
+Windsurfing
+Wrestling
+Wu Shu
