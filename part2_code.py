@@ -49,7 +49,7 @@ X_count = CVectorizer.fit_transform(articles)
 X_train_f1 = X_count.toarray()
 
 print('Feature 1 created\n')
-#-----------------------------------------Feature 2: Weighted Vector of words-------------------------------------------------------------------------------------------
+#-----------------------------------------Feature 2: Weighted Vector of words-------------------------------------------------------------
 print('Creating sparse vector...\n')
 
 vectorizer = TfidfVectorizer(stop_words='english')
@@ -58,7 +58,7 @@ X_weighted = vectorizer.fit_transform(articles)
 X_train_f2 = X_weighted.toarray()
 
 print('Feature 2 created\n')
-#------------------------------------------Feature 3: Using lists of common names and terms to create a vector-------------------------------------------------------------
+#------------------------------------------Feature 3: Using lists of common names and terms to create a vector---------------------------
 file_names=['business_terms.txt', 'celebrity_names.txt', 'political_parties.txt', 'sporting_terms.txt', 'technological_terms.txt']
 file_words=[]
 
@@ -86,7 +86,7 @@ X_count_f3 = f3_vectorizer.transform(articles)
 X_train_f3 = X_count_f3.toarray()
 
 print('Feature 3 created\n')
-#-----------------------------------------Feature Selection---------------------------------------------------------------------------------------
+#-----------------------------------------Feature Selection--------------------------------------------------------------------------
 
 def feature_creation(X1, X2, X3):
     features = []
@@ -109,7 +109,7 @@ ch2_train = SelectKBest(chi2, k=1000)
 X_train = ch2_train.fit_transform(X_train, Y_train)
 
 print('Feature selection complete\n')
-#-----------------------------------------SVM train and test/predict------------------------------------------------------------------------------
+#-----------------------------------------SVM train and test/predict---------------------------------------------------------------
 print('Training SVM...\n')
 clf = sklearn.svm.SVC(decision_function_shape='ovo')
 clf.fit(X_train, Y_train)
