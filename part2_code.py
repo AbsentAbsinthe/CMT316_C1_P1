@@ -5,6 +5,7 @@ Text classification
 C1771290
 Lewis Hemming
 '''
+#-----------------------------------------Imports--------------------------------------------------------------------------------------
 import numpy as np
 import sklearn
 from sklearn.metrics import classification_report
