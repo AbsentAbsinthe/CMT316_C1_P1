@@ -1,22 +1,20 @@
+''' 
+CMT316 - Applications of Machine Learning, Coursework 1 Part 2
+Text classification
+
+C1771290
+Lewis Hemming
+'''
 import numpy as np
-import nltk
 import sklearn
-from sklearn.pipeline import make_pipeline
-from sklearn.preprocessing import StandardScaler
 from sklearn.metrics import classification_report
+from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.feature_selection import SelectKBest, chi2
-import operator
 import os
 import random
 from random import shuffle
-import requests
-
-nltk.download('punkt') #Used to download necessary libraries
-nltk.download('wordnet')
-nltk.download('stopwords')
-
-#-----------------------------------------Data Handling and Test/Train split---------------------------------------------------------------------------
+#-----------------------------------------Data preprocessing---------------------------------------------------------------------------
 classifications = ['business', 'entertainment', 'politics', 'sport', 'tech'] 
 data = []
 test_data = []
@@ -32,106 +30,39 @@ shuffle(data)
 for i in range(round(len(data) * 0.2)):
     test_data.append(data.pop(random.randint(0,(len(data)-1))))
 
-#-----------------------------------------Data Preprocessing -------------------------------------------------------------------------------------
-lemmatizer = nltk.stem.WordNetLemmatizer()
-
-def get_list_tokens(string):
-    sentence_split=nltk.tokenize.sent_tokenize(string)
-    list_tokens=[]
-    for sentence in sentence_split:
-        list_tokens_sentence=nltk.tokenize.word_tokenize(sentence)
-    for token in list_tokens_sentence:
-        list_tokens.append(lemmatizer.lemmatize(token).lower())
-    return list_tokens
-
-
-# Add all possible stopwords to ensure that they aren't counted in the most frequent words
-stopwords=set(nltk.corpus.stopwords.words('english'))
-stopwords.add('\n')
-stopwords.add('.')
-stopwords.add(',')
-stopwords.add('--')
-stopwords.add('``')
-stopwords.add('"')
-stopwords.add('(')
-stopwords.add(')')
-stopwords.add('-')
-stopwords.add(')')
-stopwords.add("'")
-stopwords.add("''")
-stopwords.add(':')
-
-X_train = []
 Y_train = []
 
 for article in data:
     Y_train.append(classifications.index(article[1]))
 
-def get_vector_text(list_vocab,string):
-    vector_text=np.zeros(len(list_vocab))
-    list_tokens_string=get_list_tokens(string)
-    for i, word in enumerate(list_vocab):
-        if word in list_tokens_string:
-            vector_text[i]=list_tokens_string.count(word)
-    return vector_text
 
+#-----------------------------------------Feature 1: Sparse Vector of all words---------------------------------------------------------
+print('Creating sparse vector...\n')
 
-#-----------------------------------------Feature 1: Sparse Vector of 750 most common words---------------------------------------------------------
-dict_word_frequency={}
-for article in data:
-    sentence_tokens=get_list_tokens(article[0])
-    for word in sentence_tokens:
-        if word in stopwords: continue
-        if word not in dict_word_frequency: dict_word_frequency[word]=1
-        else: dict_word_frequency[word]+=1
-
-sorted_list = sorted(dict_word_frequency.items(), key=operator.itemgetter(1), reverse=True)
-
-frequent_words=[]
-for word,frequency in sorted_list:
-    frequent_words.append(word)
-
-#-----------------------------------------Feature 2: Weighted Vector of 750 words with highest significance----------------------------------------
 articles = []
 
-for article in data:
+for article in data: 
     articles.append(article[0])
 
+CVectorizer = CountVectorizer(stop_words='english')
+X_count = CVectorizer.fit_transform(articles)
+X_train_f1 = X_count.toarray()
+
+print('Feature 1 created\n')
+#-----------------------------------------Feature 2: Weighted Vector of words-------------------------------------------------------------------------------------------
+print('Creating sparse vector...\n')
+
 vectorizer = TfidfVectorizer(stop_words='english')
-X_train_2 = vectorizer.fit_transform(articles)
+X_weighted = vectorizer.fit_transform(articles)
 
-feature_names = vectorizer.get_feature_names()
+X_train_f2 = X_weighted.toarray()
 
-ch2_feature = SelectKBest(chi2, k=750)
-X_train_2 = ch2_feature.fit_transform(X_train_2, Y_train)
-
-feature_names = [feature_names[i] for i in ch2_feature.get_support(indices=True)]
-
-same = 0
-diff = 0
-
-for name in feature_names:
-    if name in frequent_words:
-        same += 1
-    else:
-        diff += 1
-
-print('\nUsing weighted word frequency vs counted word frequency gave ' + str(same)+ ' of the same words and ' + str(diff) + ' different words\n')
-
-all_features = feature_names
-for word in frequent_words:
-    all_features.append(word) 
-
-print(len(all_features))
-
-
-for article in data:
-    article_vector=get_vector_text(all_features,article[0])
-    X_train.append(article_vector)
-
-#------------------------------------------Feature 3: Names---------------------------------------------------------------------------------------
+print('Feature 2 created\n')
+#------------------------------------------Feature 3: Using lists of common names and terms to create a vector-------------------------------------------------------------
 file_names=['business_terms.txt', 'celebrity_names.txt', 'political_parties.txt', 'sporting_terms.txt', 'technological_terms.txt']
 file_words=[]
+
+print('Processing text files...\n')
 
 for i in range(len(file_names)):
     file = open(file_names[i])
@@ -145,44 +76,67 @@ for i in range(len(file_names)):
             continue
         if not line:
             break
-    tok_words.append(get_list_tokens(word))
     file_words.append(words)
 
-for article in data:
-    vector_f3 = np.zeros(len(file_names))
-    for i in range(len(file_words)):
-        total_word_appearances = 0
-        file_vector = get_vector_text(file_words[i],article[0])
-        for w in file_vector:
-            total_word_appearances += w
-        vector_f3[i] = total_word_appearances
-    print(X_train[1])
-    X_train[data.index(article)] = np.asarray(list(X_train[data.index(article)]).append(vector_f3))
+print('Creating Feature 3 Vector... \n')
 
+f3_vectorizer = CountVectorizer(stop_words='english')
+f3_vectorizer.fit(file_words)
+X_count_f3 = f3_vectorizer.transform(articles)
+X_train_f3 = X_count_f3.toarray()
+
+print('Feature 3 created\n')
 #-----------------------------------------Feature Selection---------------------------------------------------------------------------------------
 
-ch2_train = SelectKBest(chi2, k=600)
+def feature_creation(X1, X2, X3):
+    features = []
+    for i in range(len(X1)):
+        f_list = list(X1[i])
+        f2_list = list(X2[i])
+        f3_list = list(X3[i])
+        for x in range(len(f2_list)):
+            f_list.append(f2_list[x])
+        for x in range(len(f3_list)):    
+            f_list.append(f3_list[x])
+        features.append(np.asarray(f_list))
+    return features
+
+X_train = feature_creation(X_train_f1, X_train_f2, X_train_f3)
+
+print('Performing Feature selection...\n')
+
+ch2_train = SelectKBest(chi2, k=1000)
 X_train = ch2_train.fit_transform(X_train, Y_train)
 
-
+print('Feature selection complete\n')
 #-----------------------------------------SVM train and test/predict------------------------------------------------------------------------------
-X_train_np=np.asarray(X_train)
-Y_train_np=np.asarray(Y_train)
-
+print('Training SVM...\n')
 clf = sklearn.svm.SVC(decision_function_shape='ovo')
 clf.fit(X_train, Y_train)
+print('Training Complete\n')
 
+print('Testing...\n')
 true_classification = 0
 false_classification = 0
 
-X_test = []
 Y_true = []
 Y_predict = []
+X_test_data = []
 
 for article in test_data:
-    article_vector=get_vector_text(all_features,article[0])
-    X_test.append(article_vector)
     Y_true.append(classifications.index(article[1]))
+    X_test_data.append(article[0])
+
+X_test_f1_trans = CVectorizer.transform(X_test_data)
+X_test_f1 = X_test_f1_trans.toarray()
+
+X_test_f2_trans = vectorizer.transform(X_test_data)
+X_test_f2 = X_test_f2_trans.toarray()
+
+X_test_f3 = f3_vectorizer.transform(articles)
+X_test_f3 = X_count_f3.toarray()
+
+X_test = feature_creation(X_test_f1, X_test_f2, X_test_f3)
 
 X_test = ch2_train.transform(X_test)
 
@@ -193,7 +147,15 @@ for i in range(len(predictions)):
         true_classification += 1
     else:
         false_classification += 1
+
+Y_true_named = []
+Y_predict_named = []
+
+for a in range(len(Y_true)):
+    Y_true_named.append(classifications[Y_true[a]])
+    Y_predict_named.append(classifications[Y_predict[a]])
+print('\n')
+print('Testing Results:\n')
 print('\n')
 print(classification_report(Y_true, Y_predict))
 print('\n  True results:    ' + str(true_classification) + '\n False results:    ' + str(false_classification))
-
