@@ -1,4 +1,5 @@
 CMT316 - Applications of Machine Learning, Coursework 1 Part 2
+------------------------------------------------------------------------------
 Text classification
 ------------------------------------------------------------------------------
 part2_code.py README
@@ -15,10 +16,15 @@ using 3 features followed by feature selection. This code release contains a BBC
 Requirements
 ------------------------------------------------------------------------------
 Python 3.9
+
 Python packages needed:
+
 -sklearn
+
 -numpy
+
 -os
+
 -random
 
 To install packages:
