@@ -157,5 +157,5 @@ for a in range(len(Y_true)):
 print('\n')
 print('Testing Results:\n')
 print('\n')
-print(classification_report(Y_true, Y_predict))
+print(classification_report(Y_true_named, Y_predict_named))
 print('\n  True results:    ' + str(true_classification) + '\n False results:    ' + str(false_classification))
