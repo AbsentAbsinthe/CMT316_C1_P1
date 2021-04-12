@@ -1,16 +1,31 @@
 CMT316 - Applications of Machine Learning, Coursework 1 Part 2
 Text classification
-
+------------------------------------------------------------------------------
 part2_code.py README
 
 C1771290
 Lewis Hemming
+
+
+Requirements
 ------------------------------------------------------------------------------
-How to run on linux: 
+Python 3.9
+Python packages needed:
+-sklearn
+-numpy
+-os
+-random
 
-First ensure Python is installed with the packages:
-sklearn, numpy, os, random
+To install packages:
 
-To run the program use the command:
+```python -m pip install -r packages.txt```
 
-python part2_code.py 
+Running
+------------------------------------------------------------------------------
+How to run on linux:
+
+```python part2_code.py ```
+
+How to run on windows: 
+
+```python part2_code.py ```
