@@ -1,4 +1,5 @@
 CMT316 - Applications of Machine Learning, Coursework 1 Part 2
+------------------------------------------------------------------------------
 Text classification
 ------------------------------------------------------------------------------
 part2_code.py README
