@@ -15,13 +15,13 @@ from sklearn.feature_selection import SelectKBest, chi2
 import os
 import random
 from random import shuffle
-#-----------------------------------------Data preprocessing---------------------------------------------------------------------------
-classifications = ['business', 'entertainment', 'politics', 'sport', 'tech'] 
+#-----------------------------------------Data spliting---------------------------------------------------------------------------
+classifications = ['business', 'entertainment', 'politics', 'sport', 'tech'] # These are the 5 possible classifications for the text
 data = []
 test_data = []
 
 for cl in classifications:
-    path = 'D:/UNI/CMT316 - Applications of Machine Learning; Natural Language Processing and Computer Vision/Coursework 1/datasets_coursework1/bbc/' + cl
+    path = 'datasets_coursework1/bbc/' + cl
     for file in os.listdir(path):
         data.append([(open((path + '/' + str(file))).read()),cl])
 
@@ -66,7 +66,7 @@ file_words=[]
 print('Processing text files...\n')
 
 for i in range(len(file_names)):
-    file = open(file_names[i])
+    file = open(('feature_3/' + file_names[i]))
     words = ''
     tok_words = []
     while True:
