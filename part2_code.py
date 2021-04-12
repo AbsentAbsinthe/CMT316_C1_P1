@@ -5,7 +5,7 @@ Text classification
 C1771290
 Lewis Hemming
 '''
-#-----------------------------------------Imports--------------------------------------------------------------------------------------
+#-----------------------------------------Imports---------------------------------------------------------------------------------------------------------------------
 import numpy as np
 import sklearn
 from sklearn.metrics import classification_report
@@ -15,7 +15,7 @@ from sklearn.feature_selection import SelectKBest, chi2
 import os
 import random
 from random import shuffle
-#-----------------------------------------Data spliting---------------------------------------------------------------------------
+#-----------------------------------------Data spliting---------------------------------------------------------------------------------------------------------------
 classifications = ['business', 'entertainment', 'politics', 'sport', 'tech'] # These are the 5 possible classifications for the text
 data = []
 test_data = []
@@ -23,34 +23,34 @@ test_data = []
 for cl in classifications:
     path = 'datasets_coursework1/bbc/' + cl
     for file in os.listdir(path):
-        data.append([(open((path + '/' + str(file))).read()),cl])
+        data.append([(open((path + '/' + str(file))).read()),cl])   # News Reports are read into a list of 2 objects, one containting the report as a string and one
+                                                                    # containing the classification, this is then appended to a list containg all the data
 
-shuffle(data)
-
+shuffle(data) # The order of this data is then randomised to ensure each classification isn't all grouped together
 
 for i in range(round(len(data) * 0.2)):
-    test_data.append(data.pop(random.randint(0,(len(data)-1))))
-
+    test_data.append(data.pop(random.randint(0,(len(data)-1)))) # 20% of the data is then randomly chosen to be removed from the main data file and appended to the
+                                                                # test set
 Y_train = []
 
 for article in data:
-    Y_train.append(classifications.index(article[1]))
+    Y_train.append(classifications.index(article[1])) # Y_train contains the correct classifications of all the training data
 
 
-#-----------------------------------------Feature 1: Sparse Vector of all words---------------------------------------------------------
+#-----------------------------------------Feature 1: Sparse Vector of all words--------------------------------------------------------------------------------------
 print('Creating sparse vector...\n')
 
 articles = []
 
 for article in data: 
-    articles.append(article[0])
+    articles.append(article[0])  # articles contains the string reports of all the training data
 
-CVectorizer = CountVectorizer(stop_words='english')
-X_count = CVectorizer.fit_transform(articles)
+CVectorizer = CountVectorizer(stop_words='english') # A count vectorizer is created using english stopwords
+X_count = CVectorizer.fit_transform(articles) 
 X_train_f1 = X_count.toarray()
 
 print('Feature 1 created\n')
-#-----------------------------------------Feature 2: Weighted Vector of words-------------------------------------------------------------
+#-----------------------------------------Feature 2: Weighted Vector of words------------------------------------------------------------------------------------------
 print('Creating sparse vector...\n')
 
 vectorizer = TfidfVectorizer(stop_words='english')
@@ -59,7 +59,7 @@ X_weighted = vectorizer.fit_transform(articles)
 X_train_f2 = X_weighted.toarray()
 
 print('Feature 2 created\n')
-#------------------------------------------Feature 3: Using lists of common names and terms to create a vector---------------------------
+#------------------------------------------Feature 3: Using lists of common names and terms to create a vector--------------------------------------------------------
 file_names=['business_terms.txt', 'celebrity_names.txt', 'political_parties.txt', 'sporting_terms.txt', 'technological_terms.txt']
 file_words=[]
 
@@ -87,7 +87,7 @@ X_count_f3 = f3_vectorizer.transform(articles)
 X_train_f3 = X_count_f3.toarray()
 
 print('Feature 3 created\n')
-#-----------------------------------------Feature Selection--------------------------------------------------------------------------
+#-----------------------------------------Feature Selection-------------------------------------------------------------------------------------------------------
 
 def feature_creation(X1, X2, X3):
     features = []
@@ -110,7 +110,7 @@ ch2_train = SelectKBest(chi2, k=1000)
 X_train = ch2_train.fit_transform(X_train, Y_train)
 
 print('Feature selection complete\n')
-#-----------------------------------------SVM train and test/predict---------------------------------------------------------------
+#-----------------------------------------SVM train and test/predict--------------------------------------------------------------------------------------------
 print('Training SVM...\n')
 clf = sklearn.svm.SVC(decision_function_shape='ovo')
 clf.fit(X_train, Y_train)
