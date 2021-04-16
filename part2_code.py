@@ -15,6 +15,7 @@ from sklearn.feature_selection import SelectKBest, chi2
 from sklearn.model_selection import KFold
 import os
 from random import randint
+import sys
 #-----------------------------------------Data spliting---------------------------------------------------------------------------------------------------------------
 classifications = ['business', 'entertainment', 'politics', 'sport', 'tech'] # These are the 5 possible classifications for the text
 data = []
@@ -22,6 +23,14 @@ train_data = []
 development_data = []
 temp_data = []
 test_data = []
+
+arg = int(sys.argv[1])
+if arg == 1:
+    developer = True
+    print('Running Delevopment version with random seeds...')
+else:
+    developer = False
+    print('Running with random data selection...')
 
 print('Reading data...\n')
 
@@ -33,14 +42,22 @@ for cl in classifications:
 
 print('Creating Training, Development and Test sets...\n')
 
-ttf = KFold(n_splits=4, random_state=None, shuffle=True) # The order of all data is then shuffled to ensure each classification isn't all grouped together
-ttd = KFold(n_splits=2, random_state=None, shuffle=True)
+if developer:
+    ttf = KFold(n_splits=4, random_state=25, shuffle=True) # The order of all data is then shuffled to ensure each classification isn't all grouped together
+    ttd = KFold(n_splits=2, random_state=31, shuffle=True) # Both K forlds contain random seeds to ensure the Dev data is the same each time
+else:
+    ttf = KFold(n_splits=4, shuffle=True) # The order of all data is then shuffled to ensure each classification isn't all grouped together
+    ttd = KFold(n_splits=2, shuffle=True)
 
 s0, s1, s2, s3 = ttf.split(data) # KFold is performed on the main data to randomly select 75% of the data to be the training data
 
+
 possible_splits = [s0, s1, s2, s3]
 
-ttf_splits = possible_splits[randint(0,(len(possible_splits)-1))] # A random split is chosen
+if developer:
+    ttf_splits = s0 # Preset to keep the development data the same
+else:
+    ttf_splits = possible_splits[randint(0,(len(possible_splits)-1))] # A random split is chosen
 
 for i in ttf_splits[0]:
     train_data.append(data[int(i)])
@@ -51,7 +68,10 @@ t0, t1 = ttd.split(temp_data) # KFold is performed on the remaining 25% of the d
 
 possible_d_splits = [t0, t1]
 
-ttd_splits = possible_d_splits[randint(0,(len(possible_d_splits)-1))] # A random split is chosen
+if developer:
+    ttd_splits = t0 # Preset to keep the development data the same
+else:
+    ttd_splits = possible_d_splits[randint(0,(len(possible_d_splits)-1))] # A random split is chosen
 
 for i in ttd_splits[0]:
     test_data.append(temp_data[int(i)])
@@ -138,12 +158,60 @@ ch2_train = SelectKBest(chi2, k=1000)
 X_train = ch2_train.fit_transform(X_train, Y_train)
 
 print('Feature selection complete\n')
-#-----------------------------------------SVM train and test/predict--------------------------------------------------------------------------------------------
+#-----------------------------------------SVM train ------------------------------------------------------------------------------------------------------------
 print('Training SVM...\n')
 clf = sklearn.svm.SVC(decision_function_shape='ovo')
 clf.fit(X_train, Y_train)
 print('Training Complete\n')
+#-----------------------------------------SVM Development-------------------------------------------------------------------------------------------------------
+if developer:
+    print('Testing Development Data...\n')
+    true_dev_classification = 0
+    false_dev_classification = 0
 
+    Y_dev_true = []
+    Y_dev_predict = []
+    X_test_dev_data = []
+
+    for article in development_data:
+        Y_dev_true.append(classifications.index(article[1]))
+        X_test_dev_data.append(article[0])
+
+    X_test_dev_f1_trans = CVectorizer.transform(X_test_dev_data)
+    X_test_dev_f1 = X_test_dev_f1_trans.toarray()
+
+    X_test_dev_f2_trans = vectorizer.transform(X_test_dev_data)
+    X_test_dev_f2 = X_test_dev_f2_trans.toarray()
+
+    X_test_dev_f3 = f3_vectorizer.transform(X_test_dev_data)
+    X_test_dev_f3 = X_test_dev_f3.toarray()
+
+    X_test_dev = feature_creation(X_test_dev_f1, X_test_dev_f2, X_test_dev_f3)
+
+    X_test_dev = ch2_train.transform(X_test_dev)
+
+    dev_predictions = clf.predict(X_test_dev)
+    for i in range(len(dev_predictions)):
+        Y_dev_predict.append(dev_predictions[i])
+        if dev_predictions[i] == Y_dev_true[i]:
+            true_dev_classification += 1
+        else:
+            false_dev_classification += 1
+
+    Y_true_dev_named = []
+    Y_predict_dev_named = []
+
+    for a in range(len(Y_dev_true)):
+        Y_true_dev_named.append(classifications[Y_dev_true[a]])
+        Y_predict_dev_named.append(classifications[Y_dev_predict[a]])
+    print('Testing Complete\n')
+    print('Results:\n')
+    print('\n')
+    print(classification_report(Y_true_dev_named, Y_predict_dev_named))
+    print('\n  True results:    ' + str(true_dev_classification) + '\n False results:    ' + str(false_dev_classification))
+    print('\n ---------------------------------------------------------------------- \n')
+
+#-----------------------------------------SVM testing-----------------------------------------------------------------------------------------------------------
 print('Testing...\n')
 true_classification = 0
 false_classification = 0
@@ -162,8 +230,8 @@ X_test_f1 = X_test_f1_trans.toarray()
 X_test_f2_trans = vectorizer.transform(X_test_data)
 X_test_f2 = X_test_f2_trans.toarray()
 
-X_test_f3 = f3_vectorizer.transform(articles)
-X_test_f3 = X_count_f3.toarray()
+X_test_f3 = f3_vectorizer.transform(X_test_data)
+X_test_f3 = X_test_f3.toarray()
 
 X_test = feature_creation(X_test_f1, X_test_f2, X_test_f3)
 
