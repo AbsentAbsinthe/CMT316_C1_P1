@@ -12,12 +12,16 @@ from sklearn.metrics import classification_report
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.feature_selection import SelectKBest, chi2
+from sklearn.model_selection import KFold
 import os
 import random
 from random import shuffle
 #-----------------------------------------Data spliting---------------------------------------------------------------------------------------------------------------
 classifications = ['business', 'entertainment', 'politics', 'sport', 'tech'] # These are the 5 possible classifications for the text
 data = []
+train_data = []
+development_data = []
+temp_data = []
 test_data = []
 
 for cl in classifications:
@@ -26,14 +30,33 @@ for cl in classifications:
         data.append([(open((path + '/' + str(file))).read()),cl])   # News Reports are read into a list of 2 objects, one containting the report as a string and one
                                                                     # containing the classification, this is then appended to a list containg all the data
 
+ttf = KFold(n_splits=4, random_state=None, shuffle=True)
+ttd = KFold(n_splits=2, random_state=None, shuffle=True)
+
+ttf_splits, s1, s2, s3 = ttf.split(data)
+
+for i in ttf_splits[0]:
+    train_data.append(data[int(i)])
+for i in ttf_splits[1]:
+    temp_data.append(data[int(i)])
+
+ttd_splits, t1 = ttd.split(temp_data)
+
+for i in ttd_splits[0]:
+    test_data.append(temp_data[int(i)])
+for i in ttd_splits[1]:
+    development_data.append(temp_data[int(i)])
+
+'''
 shuffle(data) # The order of this data is then randomised to ensure each classification isn't all grouped together
 
 for i in range(round(len(data) * 0.2)):
     test_data.append(data.pop(random.randint(0,(len(data)-1)))) # 20% of the data is then randomly chosen to be removed from the main data file and appended to the
                                                                 # test set
+'''
 Y_train = []
 
-for article in data:
+for article in train_data:
     Y_train.append(classifications.index(article[1])) # Y_train contains the correct classifications of all the training data
 
 
@@ -42,7 +65,7 @@ print('Creating sparse vector...\n')
 
 articles = []
 
-for article in data: 
+for article in train_data: 
     articles.append(article[0])  # articles contains the string reports of all the training data
 
 CVectorizer = CountVectorizer(stop_words='english') # A count vectorizer is created using english stopwords
