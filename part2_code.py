@@ -30,30 +30,23 @@ for cl in classifications:
         data.append([(open((path + '/' + str(file))).read()),cl])   # News Reports are read into a list of 2 objects, one containting the report as a string and one
                                                                     # containing the classification, this is then appended to a list containg all the data
 
-ttf = KFold(n_splits=4, random_state=None, shuffle=True)
+ttf = KFold(n_splits=4, random_state=None, shuffle=True) # The order of all data is then shuffled to ensure each classification isn't all grouped together
 ttd = KFold(n_splits=2, random_state=None, shuffle=True)
 
-ttf_splits, s1, s2, s3 = ttf.split(data)
+ttf_splits, s1, s2, s3 = ttf.split(data) # KFold is performed on the main data to randomly select 75% of the data to be the training data
 
 for i in ttf_splits[0]:
     train_data.append(data[int(i)])
 for i in ttf_splits[1]:
     temp_data.append(data[int(i)])
 
-ttd_splits, t1 = ttd.split(temp_data)
+ttd_splits, t1 = ttd.split(temp_data) # KFold is performed on the remaining 25% of the data to randomly select half of the data to be the test data and half to be development data
 
 for i in ttd_splits[0]:
     test_data.append(temp_data[int(i)])
 for i in ttd_splits[1]:
     development_data.append(temp_data[int(i)])
 
-'''
-shuffle(data) # The order of this data is then randomised to ensure each classification isn't all grouped together
-
-for i in range(round(len(data) * 0.2)):
-    test_data.append(data.pop(random.randint(0,(len(data)-1)))) # 20% of the data is then randomly chosen to be removed from the main data file and appended to the
-                                                                # test set
-'''
 Y_train = []
 
 for article in train_data:
