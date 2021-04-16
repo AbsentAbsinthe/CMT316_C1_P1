@@ -183,8 +183,8 @@ Y_predict_named = []
 for a in range(len(Y_true)):
     Y_true_named.append(classifications[Y_true[a]])
     Y_predict_named.append(classifications[Y_predict[a]])
-print('\n')
-print('Testing Results:\n')
+print('Testing Complete\n')
+print('Results:\n')
 print('\n')
 print(classification_report(Y_true_named, Y_predict_named))
 print('\n  True results:    ' + str(true_classification) + '\n False results:    ' + str(false_classification))
