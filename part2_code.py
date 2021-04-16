@@ -14,8 +14,7 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.feature_selection import SelectKBest, chi2
 from sklearn.model_selection import KFold
 import os
-import random
-from random import shuffle
+from random import randint
 #-----------------------------------------Data spliting---------------------------------------------------------------------------------------------------------------
 classifications = ['business', 'entertainment', 'politics', 'sport', 'tech'] # These are the 5 possible classifications for the text
 data = []
@@ -33,14 +32,22 @@ for cl in classifications:
 ttf = KFold(n_splits=4, random_state=None, shuffle=True) # The order of all data is then shuffled to ensure each classification isn't all grouped together
 ttd = KFold(n_splits=2, random_state=None, shuffle=True)
 
-ttf_splits, s1, s2, s3 = ttf.split(data) # KFold is performed on the main data to randomly select 75% of the data to be the training data
+s0, s1, s2, s3 = ttf.split(data) # KFold is performed on the main data to randomly select 75% of the data to be the training data
+
+possible_splits = [s0, s1, s2, s3]
+
+ttf_splits = possible_splits[randint(0,(len(possible_splits)-1))] # A random split is chosen
 
 for i in ttf_splits[0]:
     train_data.append(data[int(i)])
 for i in ttf_splits[1]:
     temp_data.append(data[int(i)])
 
-ttd_splits, t1 = ttd.split(temp_data) # KFold is performed on the remaining 25% of the data to randomly select half of the data to be the test data and half to be development data
+t0, t1 = ttd.split(temp_data) # KFold is performed on the remaining 25% of the data to randomly select half of the data to be the test data and half to be development data
+
+possible_d_splits = [t0, t1]
+
+ttd_splits = possible_d_splits[randint(0,(len(possible_d_splits)-1))] # A random split is chosen
 
 for i in ttd_splits[0]:
     test_data.append(temp_data[int(i)])
