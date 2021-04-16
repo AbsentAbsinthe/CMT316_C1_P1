@@ -34,9 +34,14 @@ To install packages:
 Running
 ------------------------------------------------------------------------------
 How to run on linux:
-
-```python part2_code.py ```
+  With development set and preset seed:
+```python part2_code.py 1```
+  With random data split, showing only test data:
+```python part2_code.py 0``` 
 
 How to run on windows: 
 
-```python part2_code.py ```
+  With development set and preset seed:
+```python part2_code.py 1```
+  With random data split, showing only test data:
+```python part2_code.py 0``` 
