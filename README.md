@@ -44,6 +44,9 @@ How to run on linux:
 How to run on windows: 
 
   With development set and preset seed:
+  
 ```python part2_code.py 1```
+
   With random data split, showing only test data:
+  
 ```python part2_code.py 0``` 
