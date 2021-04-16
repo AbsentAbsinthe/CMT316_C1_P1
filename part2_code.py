@@ -23,11 +23,15 @@ development_data = []
 temp_data = []
 test_data = []
 
+print('Reading data...\n')
+
 for cl in classifications:
     path = 'datasets_coursework1/bbc/' + cl
     for file in os.listdir(path):
         data.append([(open((path + '/' + str(file))).read()),cl])   # News Reports are read into a list of 2 objects, one containting the report as a string and one
                                                                     # containing the classification, this is then appended to a list containg all the data
+
+print('Creating Training, Development and Test sets...\n')
 
 ttf = KFold(n_splits=4, random_state=None, shuffle=True) # The order of all data is then shuffled to ensure each classification isn't all grouped together
 ttd = KFold(n_splits=2, random_state=None, shuffle=True)
@@ -54,6 +58,7 @@ for i in ttd_splits[0]:
 for i in ttd_splits[1]:
     development_data.append(temp_data[int(i)])
 
+print('Complete\n')
 Y_train = []
 
 for article in train_data:
