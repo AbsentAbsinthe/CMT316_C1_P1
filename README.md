@@ -27,6 +27,8 @@ Python packages needed:
 
 -random
 
+-sys
+
 To install packages:
 
 ```python -m pip install -r packages.txt```
