@@ -74,9 +74,9 @@ else:
     ttd_splits = possible_d_splits[randint(0,(len(possible_d_splits)-1))] # A random split is chosen
 
 for i in ttd_splits[0]:
-    test_data.append(temp_data[int(i)])
-for i in ttd_splits[1]:
     development_data.append(temp_data[int(i)])
+for i in ttd_splits[1]:
+    test_data.append(temp_data[int(i)])
 
 print('Complete\n')
 Y_train = []
